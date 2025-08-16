@@ -1,0 +1,49 @@
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  min-height: 58px;
+  background: #4472e7;
+  border-radius: 15px;
+  margin-top: 18px;
+  padding: 0 28px 0 20px;
+  box-shadow:
+    0 2px 8px #33448970,
+    0 1px 6px #8ea8fd80,
+    0 0 14px #5a82f7b0;
+  transition: box-shadow 0.23s, background 0.23s;
+  z-index: 41;
+}
+
+.profileBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(145deg,#5184ea 55%,#305fc7 100%);
+  border-radius: 11px;
+  border: none;
+  outline: none;
+  box-shadow:
+    5px 5px 12px #3352b8,
+    -5px -5px 12px #87aeff;
+  color: #e0e7ff;
+  cursor: pointer;
+  transition: background 0.16s, box-shadow 0.18s;
+}
+
+.profileBtn:hover {
+  background: linear-gradient(120deg, #3e65d4 60%, #4a84ff 100%);
+  box-shadow:
+    0 4px 12px #2747a7,
+    0 0 12px #b9d7ff;
+  color: #40e3ff;
+}
+
+.profileBtn:active {
+  background: #3554ae;
+  box-shadow: inset 2px 2px 7px #22366d, inset -2px -2px 5px #99b5fd;
+  color: #b8e6ff;
+}
