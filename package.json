@@ -12,8 +12,8 @@
     "next": "^15.4.6",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "thirdweb": "^5.0.0",
-    "thirdweb/react": "^5.0.0",
+    "@thirdweb-dev/sdk": "^4.0.13",
+    "@thirdweb-dev/react": "^4.0.13",
     "@iconify/react": "^6.0.0"
   },
   "devDependencies": {

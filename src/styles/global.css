@@ -1,1 +1,100 @@
 
+.blueNeomorph {
+      background: #3a6df0;
+        color: #fff;
+          border: none;
+            padding: 0.9em 2em;
+              border-radius: 15px;
+                box-shadow: 8px 8px 16px #325dc5, -8px -8px 16px #4785ff;
+                  font-size:1.1em;
+                    font-weight:bold;
+                      transition: box-shadow 0.2s, transform 0.2s;
+                        cursor:pointer;
+                        }
+                        .blueNeomorph:active {
+                          box-shadow: 4px 4px 8px #325dc5, -4px -4px 8px #4785ff;
+                            transform: scale(0.97);
+                            }
+                            .neoflatAddr {
+                              background: #3059a1;
+                                padding: 0.4em 0.9em;
+                                  border-radius: 11px;
+                                    font-size: 0.97em;
+                                      font-weight: 600;
+                                        letter-spacing: 0.04em;
+                                          box-shadow: 2px 2px 5px #143973, -2px -2px 5px #4c83fd;
+                                            color: #e1eaff;
+                                            }
+                                            .popupBG {
+                                              position: fixed;
+                                                top: 0; left: 0; right:0; bottom:0;
+                                                  background: rgba(24,46,120,0.13);
+                                                    z-index: 5000;
+                                                      display:flex;
+                                                        align-items:center;
+                                                          justify-content:center;
+                                                          }
+                                                          .popup {
+                                                            background: #222b4f;
+                                                              border-radius: 18px;
+                                                                box-shadow: 12px 12px 30px #162349, -8px -8px 24px #355ab7;
+                                                                  color:white;
+                                                                    padding:2em;
+                                                                      min-width:300px;
+                                                                        max-width:95vw;
+                                                                          text-align:center;
+                                                                          }
+                                                                          .walletBtn {
+                                                                            background: #3183ff;
+                                                                              color: #fff;
+                                                                                border: none;
+                                                                                  border-radius: 11px;
+                                                                                    margin: 0.5em 0;
+                                                                                      width:100%;
+                                                                                        padding: 0.7em;
+                                                                                          font-weight:bold;
+                                                                                            font-size:1em;
+                                                                                              display: flex;
+                                                                                                align-items: center;
+                                                                                                  justify-content: center;
+                                                                                                    gap: 7px;
+                                                                                                      cursor: pointer;
+                                                                                                        box-shadow: 4px 4px 8px #204695, -4px -4px 8px #267cf1;
+                                                                                                          transition: box-shadow 0.2s;
+                                                                                                          }
+                                                                                                          .walletBtn:hover {
+                                                                                                            box-shadow: 3px 3px 6px #192e5e, -3px -3px 6px #509dff;
+                                                                                                              background: #256fff;
+                                                                                                              }
+                                                                                                              .closeBtn {
+                                                                                                                margin-top:1em;
+                                                                                                                  background: #f44336;
+                                                                                                                    color:white;
+                                                                                                                      border:none;
+                                                                                                                        border-radius:8px;
+                                                                                                                          padding:0.5em 1.6em;
+                                                                                                                            cursor:pointer;
+                                                                                                                            }
+                                                                                                                            .topBar {
+                                                                                                                              display: flex;
+                                                                                                                                align-items: center;
+                                                                                                                                  justify-content: flex-end;
+                                                                                                                                    min-height: 44px;
+                                                                                                                                      margin-bottom: 18px;
+                                                                                                                                      }
+                                                                                                                                      .profileBtn {
+                                                                                                                                        background: #466bea;
+                                                                                                                                          border: none;
+                                                                                                                                            border-radius: 100px;
+                                                                                                                                              box-shadow: 2px 2px 8px #3158b8, -2px -2px 6px #81a7fc;
+                                                                                                                                                color: #ecf5ff;
+                                                                                                                                                  width: 40px; height: 40px;
+                                                                                                                                                    display: flex; align-items: center; justify-content: center;
+                                                                                                                                                      cursor: pointer;
+                                                                                                                                                        margin-left: 8px;
+                                                                                                                                                          transition: box-shadow .18s;
+                                                                                                                                                          }
+                                                                                                                                                          .profileBtn:hover {
+                                                                                                                                                            box-shadow: 1px 1px 3px #143973, -1px -1px 3px #82b3ff;
+                                                                                                                                                              background: #5a82f7;
+                                                                                                                                                              }
