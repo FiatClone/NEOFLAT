@@ -4,9 +4,8 @@ import type { AppProps } from "next/app";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-      <ThirdwebProvider activeChain="base">
-            <Component {...pageProps} />
-                </ThirdwebProvider>
-                  );
-                  }
-                  
+    <ThirdwebProvider>
+      <Component {...pageProps} />
+    </ThirdwebProvider>
+  );
+}
