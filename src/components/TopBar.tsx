@@ -1,13 +1,11 @@
 import React from "react";
-import ConnectWallet from "./ConnectWallet";
 import { Icon } from "@iconify/react";
 import styles from "../styles/modules/neoflat.module.css";
 
-export default function TopBar() {
+function TopBar() {
   return (
     <div className={styles.topBar}>
       <div style={{ flex: 1 }} />
-      <ConnectWallet />
       <button
         className={styles.profileBtn}
         title="Profile"
@@ -18,3 +16,5 @@ export default function TopBar() {
     </div>
   );
 }
+
+export default TopBar;
