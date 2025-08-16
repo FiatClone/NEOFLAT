@@ -179,11 +179,4 @@ export default function HomeContent() {
       `}</style>
     </div>
   );
-        }
-        thirdweb
-                                                                                                                                                                                                                                                                                          </a>
-                                                                                                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                                                                      );
-                                                                                                                                                                                                                                                                                                      }
-                                                                                                                                                                                                                                                                                                      
+}
