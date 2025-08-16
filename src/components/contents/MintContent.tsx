@@ -1,3 +1,5 @@
+import React from "react";
+
 function MintContent() {
   const account = useActiveAccount();
   const [minted, setMinted] = useState(false);
