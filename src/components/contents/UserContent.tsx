@@ -1,5 +1,6 @@
 import React from "react";
-import { CheckoutWidget, getDefaultToken, createThirdwebClient } from "thirdweb/react";
+import { CheckoutWidget, getDefaultToken } from "thirdweb/react";
+import { createThirdwebClient } from "thirdweb";
 import { base } from "thirdweb/chains";
 
 // ✅ Buat Thirdweb Client
