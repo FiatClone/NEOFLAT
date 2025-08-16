@@ -18,7 +18,7 @@ export default function App() {
           client={client}
           theme="light"
           chain={base}
-          amount={2} // gunakan number bukan string
+          amount=1 // gunakan number bukan string
           token={getDefaultToken(base)} // token default di Base chain
           tokenAddress="0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
           seller="0xEb0effdFB4dC5b3d5d3aC6ce29F3ED213E95d675"
