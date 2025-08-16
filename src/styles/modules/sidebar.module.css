@@ -1,1 +1,62 @@
+.sidebarContainer {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(135deg, #e9f2ff 0%, #cfe0ff 100%);
+}
 
+.sidebarFrame {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px 18px 32px 18px;
+  background: linear-gradient(135deg, #d0e6fd 0%, #a7c8fb 100%);
+  box-shadow: 8px 0 24px 0 #b2cfff, 
+              2px 2px 12px 4px #e3f0ff;
+  border-radius: 32px 0 35px 0;
+  min-width: 76px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cButton {
+  background: linear-gradient(145deg, #e9f2ff 0%, #cfe0ff 80%);
+  border: none;
+  border-radius: 18px;
+  box-shadow:  8px 8px 24px #bed1ea, 
+              -8px -8px 24px #ffffff;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.12s;
+  padding: 12px;
+  margin: 0;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cButton:hover, .cButtonActive {
+  background: linear-gradient(135deg, #a7c8fb 0%, #d0e6fd 100%);
+  box-shadow: 0 4px 16px #7eadf9,
+              2px 2px 18px 8px #cce6ff;
+  transform: translateY(-2px) scale(1.06);
+}
+
+.cIcon {
+  font-size: 2rem;
+  color: #1874df;
+  filter: drop-shadow(0 2px 8px #a6bcf9a0);
+}
+
+.contentFrame {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg,#fafdff 0%, #e4eeff 100%);
+  box-shadow: 0 10px 40px #b1cffae0;
+  border-radius: 30px 0 0 0;
+  margin-left: 18px;
+  padding: 0;
+  min-width: 0;
+  height: 100vh;
+  overflow: hidden;
+  }
