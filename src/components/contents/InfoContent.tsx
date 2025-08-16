@@ -1,5 +1,5 @@
 import React from "react";
-import { useAddress, useBalance, useOwnedNFTs } from "@thirdweb-dev/react";
+import { useAddress, useBalance, useOwnedNFTs } from "@thirdweb/react";
 import styles from "../../styles/modules/neoflat.module.css";
 
 const InfoContent: React.FC = () => {
