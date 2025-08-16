@@ -1,6 +1,13 @@
-import type { NextPage } from 'next';
-const IndexPage: NextPage = () => {
-  return null;
-  };
+import Sidebar from "../components/Sidebar";
+import { useState } from "react";
 
-  export default IndexPage;
+export default function HomePage() {
+  const [activePage, setActivePage] = useState("home");
+    return (
+        <div>
+              <Sidebar activePage={activePage} setActivePage={setActivePage} />
+                    {/* Tambah konten lain di sini */}
+                        </div>
+                          );
+                          }
+                          
