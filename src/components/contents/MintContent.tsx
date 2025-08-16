@@ -1,6 +1,6 @@
-import ConnectWallet from "./ConnectWallet";
+import ConnectWallet from "../ConnectWallet";
 
-const User = () => {
+const MintContent = () => {
   return (
     <div style={{ transform: "scale(0.6)", transformOrigin: "center" }}>
       <ConnectWallet />
