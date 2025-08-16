@@ -1,9 +1,11 @@
 import React from "react";
+import ConnectWallet from "../components/ConnectWallet";
+
 export default function UserContent() {
   return (
     <div>
       <h2>Profil</h2>
-      <p>Koleksi wallet address, NFT, history, dan setting user.</p>
+      <ConnectWallet />
     </div>
   );
 }
