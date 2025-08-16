@@ -1,22 +1,31 @@
+import { createThirdwebClient } from "thirdweb";
+import { ConnectButton } from "thirdweb/react";
+import { darkTheme } from "thirdweb/react";
+import { createWallet } from "thirdweb/wallets";
 
-import React from "react";
-import ConnectWallet from "./ConnectWallet";
-import { Icon } from "@iconify/react";
-import styles from "../styles/modules/neoflat.module.css";
+const client = createThirdwebClient({
+  clientId: "91e2d2d514dd899aa83f2f028742a060",
+});
 
-export default function TopBar() {
+const wallets = [createWallet("walletConnect")];
+
+function Example() {
   return (
-      <div className={styles.topBar}>
-            <div style={{ flex: 1 }} />
-                  <ConnectWallet />
-                        <button
-                                className={styles.profileBtn}
-                                        title="Profile"
-                                                style={{ marginLeft: 14 }}
-                                                      >
-                                                              <Icon icon="tabler:user-circle" fontSize={28} />
-                                                                    </button>
-                                                                        </div>
-                                                                          );
-                                                                          }
-                                                                          
+    <ConnectButton
+      client={client}
+      connectModal={{ showThirdwebBranding: false, size: "wide" }}
+      theme={darkTheme({
+        colors: {
+          modalBg: "hsl(228, 64%, 53%)",
+          borderColor: "hsl(0, 100%, 3%)",
+          selectedTextBg: "hsl(240, 85%, 58%)",
+          primaryButtonBg: "hsl(240, 70%, 49%)",
+          secondaryIconColor: "hsl(251, 100%, 99%)",
+          selectedTextColor: "hsl(234, 33%, 94%)",
+          primaryButtonText: "hsl(228, 100%, 97%)",
+        },
+      })}
+      wallets={wallets}
+    />
+  );
+}
