@@ -9,7 +9,7 @@ const client = createThirdwebClient({
 
 const wallets = [createWallet("walletConnect")];
 
-function Example() {
+function ConnectWallet() {
   return (
     <ConnectButton
       client={client}
@@ -29,3 +29,6 @@ function Example() {
     />
   );
 }
+
+export default ConnectWallet;
+        
