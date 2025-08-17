@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Ethereum",
+    "nativeCurrency": "ETH",
+    "rpc": [ "https://rpc.ankr.com/eth" ],
+    "explorer": "https://etherscan.io",
+    "icon": "/icons/ethereum.svg"
+  },
+  {
+    "id": 8453,
+    "name": "Base",
+    "nativeCurrency": "ETH",
+    "rpc": [ "https://mainnet.base.org" ],
+    "explorer": "https://basescan.org",
+    "icon": "/icons/base.svg"
+  },
+  {
+    "id": 10,
+    "name": "Optimism",
+    "nativeCurrency": "ETH",
+    "rpc": [ "https://mainnet.optimism.io" ],
+    "explorer": "https://optimistic.etherscan.io",
+    "icon": "/icons/op.svg"
+  }
+]

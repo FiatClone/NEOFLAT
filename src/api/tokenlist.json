@@ -1,0 +1,8 @@
+[
+  { "chainId": 1, "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", "symbol": "ETH", "decimals": 18 },
+  { "chainId": 1, "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48", "symbol": "USDC", "decimals": 6 },
+  { "chainId": 8453, "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", "symbol": "ETH", "decimals": 18 },
+  { "chainId": 8453, "address": "0xd9AAEC86B65d86f6A7B5ba80a857B394d08A28eE", "symbol": "USDC", "decimals": 6 },
+  { "chainId": 10, "address": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE", "symbol": "ETH", "decimals": 18 },
+  { "chainId": 10, "address": "0x4200000000000000000000000000000000000042", "symbol": "OP", "decimals": 18 }
+]
