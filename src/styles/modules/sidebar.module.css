@@ -1,20 +1,21 @@
 /* Container for the entire layout */
-.appContainer {
+.appContainer
+{
   display: flex;
-    flex-direction: column;
-      min-height: 100vh;
-        position: relative;
-        }
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
 
-        /* Header */
-        .header {
-          position: fixed;
-            top: 0;
-              left: 0;
-                right: 0;
-                  height: 60px;
-                    background: linear-gradient(145deg, #5a82f7, #3d60d8);
-                      border-bottom: 2px solid #4a6cd9;
+.header
+{
+  position: fixed;
+  top: 0; 
+  left: 0;
+  right: 0;  
+  height: 60px;
+  background: linear-gradient(145deg, #5a82f7, #3d60d8);   
+  border-bottom: 2px solid #4a6cd9;
                         box-shadow: 0 4px 8px rgba(59, 89, 182, 0.3);
                           display: flex;
                             align-items: center;
