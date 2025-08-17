@@ -1,0 +1,139 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1b2a4a; /* biru gelap elegan */
+  padding: 0 20px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: inset 3px 3px 6px #101b33,
+              inset -3px -3px 6px #243b67,
+              6px 6px 12px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #6ddcff;
+  text-shadow: 0 0 6px rgba(109, 220, 255, 0.7);
+  cursor: pointer;
+  animation: floatLogo 4s ease-in-out infinite;
+}
+
+.logo span {
+  animation: glowText 2.5s ease-in-out infinite alternate;
+}
+
+/* Bagian kanan */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconWrap {
+  position: relative;
+}
+
+.iconBtn {
+  background: #1b2a4a;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 4px 8px #101b33,
+              -4px -4px 8px #243b67;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.iconBtn:hover {
+  transform: scale(1.1) rotate(6deg);
+  box-shadow: inset 4px 4px 8px #101b33,
+              inset -4px -4px 8px #243b67;
+}
+
+/* Dropdown Profile */
+.profileMenu,
+.chainMenu {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  background: #1b2a4a;
+  border-radius: 16px;
+  box-shadow: 6px 6px 12px #101b33,
+              -6px -6px 12px #243b67;
+  padding: 12px;
+  animation: fadeIn 0.3s ease forwards;
+  color: #fff;
+  min-width: 180px;
+}
+
+.profileMenu div,
+.chainMenu button {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.chainItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  color: #cce8ff;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.chainItem:hover {
+  background: rgba(109, 220, 255, 0.15);
+  transform: translateX(4px);
+}
+
+/* ANIMASI */
+@keyframes floatLogo {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes glowText {
+  0% {
+    color: #6ddcff;
+    text-shadow: 0 0 6px #6ddcff, 0 0 12px #3a92ff;
+  }
+  100% {
+    color: #a7f3ff;
+    text-shadow: 0 0 12px #6ddcff, 0 0 20px #3a92ff;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
