@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Icon } from "@iconify/react";
 import styles from "../styles/modules/sidebar.module.css";
@@ -12,7 +11,6 @@ import MarketContent from "./contents/MarketContent";
 import ToolContent from "./contents/ToolContent";
 import InfoContent from "./contents/InfoContent";
 import UserContent from "./contents/UserContent";
-import TopBar from "./TopBar";
 
 const PAGES = {
   home: HomeContent,
@@ -26,7 +24,7 @@ const PAGES = {
                   profile: UserContent,
                   };
 
-                  const ICONS: Record<string, string> = {
+                  const ICONS = {
                     home: "tabler:home",
                       swap: "tabler:arrows-exchange",
                         bridge: "tabler:arrows-double-ne-sw",
@@ -40,31 +38,36 @@ const PAGES = {
 
                                     const Sidebar = ({ setActivePage, activePage }) => {
                                       const ActiveComponent = PAGES[activePage];
+
                                         return (
-                                            <>
-                                                  <div className={styles.sidebarContainer}>
-                                                          <aside className={styles.sidebarFrame}>
-                                                                    {Object.keys(PAGES).map((key) => (
-                                                                                <button
-                                                                                              key={key}
-                                                                                                            className={`${styles.cButton} ${activePage === key ? styles.cButtonActive : ""}`}
-                                                                                                                          onClick={() => setActivePage(key)}
-                                                                                                                                        title={key.charAt(0).toUpperCase() + key.slice(1)}
-                                                                                                                                                    >
-                                                                                                                                                                  <Icon
-                                                                                                                                                                                  icon={ICONS[key] || "tabler:circle"}
-                                                                                                                                                                                                  className={styles.cIcon}
-                                                                                                                                                                                                                />
-                                                                                                                                                                                                                            </button>
-                                                                                                                                                                                                                                      ))}
-                                                                                                                                                                                                                                              </aside>
-                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                          <main className={styles.contentFrame}>
-                                                                                                                                                                                                                                                                  <TopBar />
-                                                                                                                                                                                                                                                                          <ActiveComponent />
-                                                                                                                                                                                                                                                                                </main>
-                                                                                                                                                                                                                                                                                    </>
-                                                                                                                                                                                                                                                                                      );
-                                                                                                                                                                                                                                                                                      };
-                                                                                                                                                                                                                                                                                      export default Sidebar;
-                                                                                                                                                                                                                                                                                      
+                                            <div className={styles.appContainer}>
+                                                  {/* Header */}
+                                                        <header className={styles.header}>
+                                                            
+                                                                      </header>
+
+                                                                            {/* Sidebar */}
+                                                                                  <div className={styles.sidebarContainer}>
+                                                                                          <aside className={styles.sidebarFrame}>
+                                                                                                    {Object.keys(PAGES).map((key) => (
+                                                                                                                <button
+                                                                                                                              key={key}
+                                                                                                                                            className={`${styles.cButton} ${activePage === key ? styles.cButtonActive : ""}`}
+                                                                                                                                                          onClick={() => setActivePage(key)}
+                                                                                                                                                                        title={key.charAt(0).toUpperCase() + key.slice(1)}
+                                                                                                                                                                                    >
+                                                                                                                                                                                                  <Icon icon={ICONS[key] || "tabler:circle"} className={styles.cIcon} />
+                                                                                                                                                                                                              </button>
+                                                                                                                                                                                                                        ))}
+                                                                                                                                                                                                                                </aside>
+                                                                                                                                                                                                                                      </div>
+
+                                                                                                                                                                                                                                            {/* Content */}
+                                                                                                                                                                                                                                                  <main className={styles.contentFrame}>
+                                                                                                                                                                                                                                                          <ActiveComponent />
+                                                                                                                                                                                                                                                                </main>
+                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                      );
+                                                                                                                                                                                                                                                                      };
+
+                                                                                                                                                                                                                                                                      export default Sidebar;

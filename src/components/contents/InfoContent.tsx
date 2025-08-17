@@ -1,6 +1,6 @@
 import React from "react";
 import { Icon } from "@iconify/react";
-import styles from "../../styles/modules/neoflat.module.css";
+import styles from "../../styles/modules/sidebar.module.css";
 
 const CHAINS = [
   {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "@/styles/modules/neoflat.module.css";
+import styles from "@/styles/modules/sidebar.module.css";
 
 // Anda bisa extend chain/token ke backend/thirdweb API untuk LIVE list
 const CHAINS = [

@@ -1,4 +1,4 @@
-import "@/styles/global.css";
+import "../styles/global.css";
 import { ThirdwebProvider } from "thirdweb/react";
 import type { AppProps } from "next/app";
 

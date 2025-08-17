@@ -1,62 +1,161 @@
-.sidebarContainer {
+/* Container for the entire layout */
+.appContainer {
   display: flex;
-  height: 100vh;
-  background: linear-gradient(135deg, #e9f2ff 0%, #cfe0ff 100%);
+    flex-direction: column;
+      min-height: 100vh;
+        position: relative;
+        }
+
+        /* Header */
+        .header {
+          position: fixed;
+            top: 0;
+              left: 0;
+                right: 0;
+                  height: 60px;
+                    background: linear-gradient(145deg, #5a82f7, #3d60d8);
+                      border-bottom: 2px solid #4a6cd9;
+                        box-shadow: 0 4px 8px rgba(59, 89, 182, 0.3);
+                          display: flex;
+                            align-items: center;
+                              justify-content: space-between;
+                                padding: 0 20px;
+                                  z-index: 1100;
+                                    user-select: none;
+                                    }
+
+                                    /* Sidebar Container */
+                                    .sidebarContainer {
+                                      position: fixed;
+                                        top: 60px; /* Below header */
+                                          left: 0;
+                                            height: calc(100vh - 60px);
+                                              width: 80px;
+                                                background: transparent;
+                                                  display: flex;
+                                                    justify-content: center;
+                                                      align-items: center;
+                                                        z-index: 1000;
+                                                        }
+
+                                                        /* Sidebar Frame */
+                                                        .sidebarFrame {
+                                                          width: 56px;
+                                                            height: 80%;
+                                                              display: flex;
+                                                                flex-direction: column;
+                                                                  align-items: center;
+                                                                    padding: 12px 0;
+                                                                      border-radius: 16px;
+                                                                        background: linear-gradient(145deg, #5a82f7, #3d60d8);
+                                                                          border: 2px solid #4a6cd9;
+                                                                            box-shadow: 0 4px 12px rgba(59, 89, 182, 0.6), inset 0 0 8px rgba(90, 130, 247, 0.5);
+                                                                              transition: all 0.3s ease;
+                                                                              }
+
+                                                                              /* Sidebar Button */
+                                                                              .cButton {
+                                                                                width: 40px;
+                                                                                  height: 40px;
+                                                                                    margin-bottom: 20px;
+                                                                                      background: linear-gradient(145deg, #6a92ff, #4a6cd9);
+                                                                                        border-radius: 8px;
+                                                                                          border: none;
+                                                                                            box-shadow: 3px 3px 8px rgba(59, 89, 182, 0.4), -3px -3px 8px rgba(90, 130, 247, 0.3);
+                                                                                              display: flex;
+                                                                                                justify-content: center;
+                                                                                                  align-items: center;
+                                                                                                    cursor: pointer;
+                                                                                                      transition: all 0.2s ease;
+                                                                                                        color: #e0e7ff;
+                                                                                                        }
+
+                                                                                                        .cButton:hover {
+                                                                                                          box-shadow: inset 2px 2px 6px rgba(39, 71, 167, 0.6), inset -2px -2px 6px rgba(174, 202, 255, 0.6);
+                                                                                                            transform: translateY(-2px);
+                                                                                                            }
+
+                                                                                                            /* Active Button */
+                                                                                                            .cButtonActive {
+                                                                                                              background: linear-gradient(145deg, #3d60d8, #6a92ff);
+                                                                                                                box-shadow: inset 4px 4px 8px rgba(43, 62, 129, 0.7), inset -4px -4px 8px rgba(161, 183, 255, 0.7);
+                                                                                                                  color: #cbd4ff;
+                                                                                                                  }
+
+                                                                                                                  /* Icon */
+                                                                                                                  .cIcon {
+                                                                                                                    width: 22px;
+                                                                                                                      height: 22px;
+                                                                                                                        transition: transform 0.25s ease, filter 0.25s ease, color 0.25s ease, opacity 0.25s ease;
+                                                                                                                          opacity: 0.9;
+                                                                                                                          }
+
+                                                                                                                          .cButton:hover .cIcon {
+                                                                                                                            transform: scale(1.15);
+                                                                                                                              filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.6));
+                                                                                                                                color: #00ffff;
+                                                                                                                                  opacity: 1;
+                                                                                                                                  }
+
+                                                                                                                                  .cButtonActive .cIcon {
+                                                                                                                                    transform: scale(1.1);
+                                                                                                                                      filter: drop-shadow(0 0 10px rgba(0, 255, 200, 0.8));
+                                                                                                                                        color: #00ffee;
+                                                                                                                                        }
+
+                                                                                                                                        /* Content Frame */
+                                                                                                                                        .contentFrame {
+                                                                                                                                          margin-left: 90px; /* Sidebar width (80px) + gap (10px) */
+                                                                                                                                            margin-top: 60px; /* Match header height */
+                                                                                                                                              padding: 24px;
+                                                                                                                                                min-height: calc(100vh - 60px);
+                                                                                                                                                  background: linear-gradient(145deg, #f5f7fa, #e0e7ff);
+                                                                                                                                                    border-radius: 15px;
+                                                                                                                                                      box-shadow: 0 4px 12px rgba(59, 89, 182, 0.2);
+                                                                                                                                                        transition: all 0.3s ease;
+                                                                                                                                                          overflow-y: auto; /* Scrollable content */
+                                                                                                                                                            position: relative;
+                                                                                                                                                            }
+
+          /* Responsive Design for Mobile */
+@media (max-width: 768px) {
+.header
+{
+  height: 50px;
+  padding: 0 10px;
 }
 
-.sidebarFrame {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  padding: 32px 18px 32px 18px;
-  background: linear-gradient(135deg, #d0e6fd 0%, #a7c8fb 100%);
-  box-shadow: 8px 0 24px 0 #b2cfff, 
-              2px 2px 12px 4px #e3f0ff;
-  border-radius: 32px 0 35px 0;
-  min-width: 76px;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.cButton {
-  background: linear-gradient(145deg, #e9f2ff 0%, #cfe0ff 80%);
-  border: none;
-  border-radius: 18px;
-  box-shadow:  8px 8px 24px #bed1ea, 
-              -8px -8px 24px #ffffff;
-  transition: background 0.2s, box-shadow 0.2s, transform 0.12s;
-  padding: 12px;
-  margin: 0;
-  outline: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cButton:hover, .cButtonActive {
-  background: linear-gradient(135deg, #a7c8fb 0%, #d0e6fd 100%);
-  box-shadow: 0 4px 16px #7eadf9,
-              2px 2px 18px 8px #cce6ff;
-  transform: translateY(-2px) scale(1.06);
-}
-
-.cIcon {
-  font-size: 2rem;
-  color: #1874df;
-  filter: drop-shadow(0 2px 8px #a6bcf9a0);
-}
-
-.contentFrame {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(135deg,#fafdff 0%, #e4eeff 100%);
-  box-shadow: 0 10px 40px #b1cffae0;
-  border-radius: 30px 0 0 0;
-  margin-left: 18px;
+.sidebarContainer
+{
+  top: 50px; /* Below mobile header */
+  left: 0;
+  width: 60px; /* Slightly narrower for mobile */
+  height: calc(100vh - 50px);
   padding: 0;
-  min-width: 0;
-  height: 100vh;
-  overflow: hidden;
-  }
+  background: transparent;
+  z-index: 1000;                                 
+}
+                                                        
+.sidebarFrame 
+{                                                    
+  width: 48px; /* Adjusted for mobile */                                                         
+  height: 90%; /* Slightly taller to fit more buttons */                                                           
+  flex-direction: column; /* Keep vertical layout */                                                             
+  align-items: center;                                                                 
+  padding: 8px 0;                                                                
+  border-radius: 12px;                                                                          
+  border: 2px solid #4a6cd9;                                                                              
+  box-shadow: 0 4px 12px rgba(59, 89, 182, 0.6);                                                                                
+}                                                                                   
+.cButton
+{                                                                                          
+  width: 36px;                                                                                     
+  height: 36px;                                                                                          
+  margin-bottom: 16px; /* Reduced spacing for mobile */                                                                                            
+}                                                                                                  
+.contentFrame 
+{                                                                                                
+  margin-left: 70px; /* Sidebar width (60px) + gap (10px) */                                                                                                      
+  margin-top: 50px; /* Match mobile header height */                                                                                                            padding: 16px; /* Slightly less padding for mobile */                                                                                                               
+  border-radius: 10px;                                                                                                               
+}                                                                                                                                                                                                                                                                  }
